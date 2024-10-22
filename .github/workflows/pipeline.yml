@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     #The instructions are defined as steps
     steps:
-      name: Echo job
-      run: echo "Building the docker image..."
+      - name: Echo job
+        run: echo "Building the docker image..."
   #Stage 2: Running the unit testing
   unit-test:
     name: The job to unit test the application
@@ -24,5 +24,5 @@ jobs:
     needs: [build-docker-image] # Wait for the build-docker-image to finish, then it starts
     #The instructions are defined as steps
     steps:
-      name: Echo unit testing of the application
-      run: echo "Unit test the docker image..."
+      - name: Echo unit testing of the application
+        run: echo "Unit test the docker image..."
