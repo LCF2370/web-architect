@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+{% include "header.html" %}
   <title>Homepage</title>
 </head>
 <body>
+  {% include "navbar.html" %}
   <h1>Home Page</h1>
-</body>
-</html>
+<!-- The include tag renders another template and outputs
+  the result into the current template. -->
+{% include "footer.html" %}

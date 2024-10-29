@@ -3,13 +3,10 @@ from flask import Flask, render_template
 # Creates the application instance
 app = Flask(__name__)
 
-app = Flask(__name__)
-
 # Routing
 @app.route("/")
-@app.route("/home")
 def index():
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/about")
 def about():
@@ -23,9 +20,9 @@ def projects():
 def services():
     return render_template("services.html")
 
-@app.route("/contact")
+@app.route("/contacts")
 def contacts():
-    return render_template("contact.html")
+    return render_template("contacts.html")
 
 # Creates a hosting IP address to run the website
 if __name__ == '__main__':
